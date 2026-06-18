@@ -223,8 +223,10 @@ def main(args):
         return sigma
     
     # Prepare dataset
-    train_dataset = get_train_dataset(root_path=args.train_data_dir, tokenizer=[tokenizer], conditions=args.conditions, 
-                                      text_encoder=[text_encoder], resolution=args.resolution, model_variant=args.pretrained_model_name_or_path)
+    train_dataset = get_train_dataset(root_path=args.train_data_dir, tokenizer=[tokenizer], conditions=args.conditions,
+                                      text_encoder=[text_encoder], resolution=args.resolution,
+                                      model_variant=args.pretrained_model_name_or_path,
+                                      dataset_mode=args.dataset_mode)
     train_dataloader = torch.utils.data.DataLoader(
         train_dataset,
         shuffle=True,

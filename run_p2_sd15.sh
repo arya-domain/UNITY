@@ -3,8 +3,8 @@ clear
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
 export WANDB_MODE=offline
 export MODEL_DIR="runwayml/stable-diffusion-v1-5"
-export ADAPTER_MODEL="RESULTS_X/all/checkpoint-10000/adapter"
-export DATA_DIR="/efs/drsanny/visual_extension/storage/Projects/UniSpec/data"
+export ADAPTER_MODEL="outputs/phase1/checkpoint-XXXXX/adapter"  # Update to your Phase 1 checkpoint
+export DATA_DIR="/path/to/your/dataset"  # Update this to your dataset path
 
 run_experiment () {
     local dataset=$1
@@ -15,16 +15,17 @@ run_experiment () {
     export CUDA_VISIBLE_DEVICES=$gpu_id
     export DATASET_MODE=$dataset
     export CONDITION=$condition
-    export OUTPUT_DIR="RESULTS_Y_NEW/${dataset}_${condition}"
+    export OUTPUT_DIR="outputs/phase2/${dataset}_${condition}"
     mkdir -p "$OUTPUT_DIR"
 
     # 
-    python train_p2.py \
+    PYTHONPATH=. python scripts/train_p2_sd15.py \
         --pretrained_model_name_or_path=$MODEL_DIR \
         --pretrained_adapter_model_name_or_path=$ADAPTER_MODEL \
         --output_dir=$OUTPUT_DIR \
         --conditions=$CONDITION \
         --train_data_dir=$DATA_DIR \
+        --dataset_mode=$DATASET_MODE \
         --mixed_precision="bf16" \
         --resolution=512 \
         --learning_rate=1e-5 \
@@ -32,6 +33,7 @@ run_experiment () {
         --validation_steps=1000 \
         --train_batch_size=2 \
         --gradient_accumulation_steps=4 \
+        --checkpointing_steps=5000 \
         --report_to="wandb" \
         --seed=42 &
 }

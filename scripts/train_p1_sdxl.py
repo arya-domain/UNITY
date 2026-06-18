@@ -227,8 +227,9 @@ def main(args):
     
     # Prepare dataset
     tokenizer, text_encoder = [tokenizer1, tokenizer2], [text_encoder1, text_encoder2]
-    train_dataset = get_train_dataset(root_path=args.train_data_dir, tokenizer=tokenizer, conditions=args.conditions, 
-                                      text_encoder=text_encoder, resolution=args.resolution)
+    train_dataset = get_train_dataset(root_path=args.train_data_dir, tokenizer=tokenizer, conditions=args.conditions,
+                                      text_encoder=text_encoder, resolution=args.resolution,
+                                      dataset_mode=args.dataset_mode)
     train_dataloader = torch.utils.data.DataLoader(
         train_dataset,  
         shuffle=True,

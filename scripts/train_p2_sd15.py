@@ -44,7 +44,7 @@ from diffusers.utils.torch_utils import is_compiled_module
 
 from models.adapter import UNITY_Config, UNITY
 from utils import parse_args
-from data.data import get_train_dataset
+from data.dataset import get_train_dataset
 
 MAX_SEQ_LENGTH = 77
 logger = None
@@ -228,8 +228,10 @@ def main(args):
         return sigma
     
     # Prepare dataset
-    train_dataset = get_train_dataset(root_path=args.train_data_dir, tokenizer=tokenizer, conditions=args.conditions, 
-                                      text_encoder=text_encoder, resolution=args.resolution)
+    train_dataset = get_train_dataset(root_path=args.train_data_dir, tokenizer=[tokenizer], conditions=args.conditions,
+                                      text_encoder=[text_encoder], resolution=args.resolution,
+                                      model_variant=args.pretrained_model_name_or_path,
+                                      dataset_mode=args.dataset_mode)
     train_dataloader = torch.utils.data.DataLoader(
         train_dataset,
         shuffle=True,

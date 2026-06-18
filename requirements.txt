@@ -1,0 +1,29 @@
+# Core deep-learning stack
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Diffusers ecosystem
+diffusers>=0.27.0
+transformers>=4.36.0
+accelerate>=0.24.0
+
+# Data utilities
+datasets>=2.14.0
+huggingface_hub>=0.20.0
+Pillow>=9.0.0
+
+# Training utilities
+tqdm>=4.64.0
+packaging>=21.0
+
+# Optional — memory-efficient attention (recommended for VRAM-constrained setups)
+# xformers>=0.0.23
+
+# Condition map generation (used during dataset preparation)
+controlnet-aux>=0.0.7
+
+# Experiment tracking (comment out if you prefer tensorboard)
+wandb>=0.16.0
+
+# Miscellaneous
+numpy>=1.24.0
