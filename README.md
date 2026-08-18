@@ -458,14 +458,14 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 <th colspan="2">Segmentation</th>
 </tr>
 <tr>
-<th>FID ↓</th>
-<th>CLIP ↑</th>
-<th>FID ↓</th>
-<th>CLIP ↑</th>
-<th>FID ↓</th>
-<th>CLIP ↑</th>
-<th>FID ↓</th>
-<th>CLIP ↑</th>
+<th>FID↓</th>
+<th>CLIP↑</th>
+<th>FID↓</th>
+<th>CLIP↑</th>
+<th>FID↓</th>
+<th>CLIP↑</th>
+<th>FID↓</th>
+<th>CLIP↑</th>
 </tr>
 </thead>
 
