@@ -30,7 +30,7 @@ Moloud Abdar<sup>3</sup>
 </div>
 
 <p align="center">
-    <img src="assests/model.png" alt="Proposed Architecture" width="90%">
+    <img src="assests/model.png" alt="Proposed Architecture" width="100%">
 </p>
 
 
