@@ -438,6 +438,7 @@ result.save("output_sdxl.png")
 
 The table below reports quantitative comparisons on SD 1.5 across four spatial conditions.
 
+
 <p align="center">
     <strong>Table 1:</strong> Comparison of FID (↓) and CLIP (↑) scores across four conditions.
     Model complexity includes Parameters (M), FLOPs (G), and Memory (GB), where Memory
@@ -471,7 +472,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 
 <tbody>
 <tr>
-<td>ControlNet <a href="#">[39]</a></td>
+<td>ControlNet</td>
 <td align="center">361.28</td>
 <td align="center">116.61</td>
 <td align="center">24×2</td>
@@ -486,7 +487,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>T2I-Adapter <a href="#">[20]</a></td>
+<td>T2I-Adapter</td>
 <td align="center"><u>77.37</u></td>
 <td align="center"><u>29.97</u></td>
 <td align="center">24×1</td>
@@ -501,7 +502,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>ControlNet++ <a href="#">[14]</a></td>
+<td>ControlNet++</td>
 <td align="center">361.28</td>
 <td align="center">116.61</td>
 <td align="center">24×2</td>
@@ -516,7 +517,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>Uni-ControlNet <a href="#">[41]</a></td>
+<td>Uni-ControlNet</td>
 <td align="center">1271.42</td>
 <td align="center">210.77</td>
 <td align="center">24×8</td>
@@ -531,7 +532,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>CtrlLoRA <a href="#">[37]</a></td>
+<td>CtrlLoRA</td>
 <td align="center">398.28</td>
 <td align="center">135.15</td>
 <td align="center">24×4</td>
@@ -546,7 +547,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>UniCon <a href="#">[15]</a></td>
+<td>UniCon</td>
 <td align="center">150.00</td>
 <td align="center">111.62</td>
 <td align="center">24×8</td>
@@ -623,7 +624,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 
 <tbody>
 <tr>
-<td>ControlNet <a href="#">[39]</a></td>
+<td>ControlNet</td>
 <td align="center">1250.98</td>
 <td align="center">1336.69</td>
 <td align="center">23.75</td>
@@ -637,7 +638,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>T2I-Adapter <a href="#">[20]</a></td>
+<td>T2I-Adapter</td>
 <td align="center">79.03</td>
 <td align="center">29.95</td>
 <td align="center">24.89</td>
@@ -651,7 +652,7 @@ The table below reports quantitative comparisons on SD 1.5 across four spatial c
 </tr>
 
 <tr>
-<td>ControlNet++ <a href="#">[14]</a></td>
+<td>ControlNet++</td>
 <td align="center">1250.98</td>
 <td align="center">1336.69</td>
 <td align="center">24.12</td>
