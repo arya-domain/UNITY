@@ -1,13 +1,38 @@
-# UNITY: Universal Condition Adapter for Diffusion Models
+<div align="center">
 
-> **ECCV 2026** — Official PyTorch Implementation
+<h1>UNITY: Universal Condition Adapter for Diffusion Models</h1>
 
-**[Aryan Das](https://aryan-das.netlify.app/)<sup>1</sup>** &nbsp;·&nbsp;
-**Koushik Biswas<sup>2</sup>** &nbsp;·&nbsp;
-**Moloud Abdar<sup>3</sup>** &nbsp;·&nbsp;
-**Vinay Kumar Verma<sup>4</sup>**
+<p>
+<a href="https://arxiv.org/abs/2606.20971v2">
+<img src="https://img.shields.io/badge/arXiv-2606.20971v2-b31b1b.svg" alt="arXiv: 2606.20971v2">
+</a>
+<a href="https://opensource.org/licenses/Apache-2.0">
+<img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License: Apache 2.0">
+</a>
+</p>
 
-UNITY is a universal adapter framework that enables controllable image generation from multiple spatial conditioning signals (canny edges, depth maps, scribbles, segmentation maps) using a single unified model. It builds on top of frozen Stable Diffusion 1.5 or SDXL backbones and follows a two-phase training curriculum.
+<p>
+<strong>
+<a href="https://aryan-das.netlify.app/">Aryan Das</a><sup>1</sup>
+&nbsp;·&nbsp;
+Koushik Biswas<sup>2</sup>
+&nbsp;·&nbsp;
+Moloud Abdar<sup>3</sup>
+&nbsp;·&nbsp;
+<a href="https://sites.google.com/view/vinaycse/home">Vinay Kumar Verma</a><sup>4,*</sup>
+</strong>
+</p>
+
+<p>
+<sup>*</sup> Corresponding author
+</p>
+
+</div>
+
+
+
+
+**UNITY** is a universal adapter framework that enables controllable image generation from multiple spatial conditioning signals (canny edges, depth maps, scribbles, segmentation maps) using a single unified model. It builds on top of frozen Stable Diffusion 1.5 or SDXL backbones and follows a two-phase training curriculum.
 
 ---
 
